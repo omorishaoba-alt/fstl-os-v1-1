@@ -3,117 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FSTL OS v1.2 – Verification & Guarantee System</title>
-<link rel="stylesheet" href="style.css">
+<title>FSTL OS v1.2 – Verification & Guarantee Platform</title>
+<style>
+  body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fc; color:#333;}
+  header {background:#004AAD; color:white; padding:20px 10px; text-align:center;}
+  header h1 {margin:0; font-size:28px;}
+  section {padding:30px 15px; max-width:900px; margin:auto;}
+  h2 {color:#004AAD; margin-bottom:15px;}
+  h3 {color:#004AAD;}
+  .highlight {color:#004AAD; font-weight:bold;}
+  .cashcow, .test-section {border:2px solid #004AAD; padding:20px; border-radius:8px; background:#E6F0FF; margin:20px 0;}
+  ul {margin:10px 0; padding-left:20px;}
+  .faq-item {margin-bottom:10px;}
+  .faq-item button {width:100%; text-align:left; padding:10px; background:#004AAD; color:white; border:none; cursor:pointer; border-radius:5px;}
+  .faq-content {display:none; padding:10px; background:#cce0ff; border-radius:5px; margin-top:5px;}
+  .form-section input, .form-section button {padding:10px; margin:5px 0; width:100%; border-radius:5px; border:1px solid #ccc;}
+  .form-section button {background:#004AAD; color:white; border:none; cursor:pointer;}
+  footer {background:#004AAD; color:white; padding:20px 10px; text-align:center;}
+  .logo {width:150px; margin-bottom:10px;}
+</style>
 </head>
-
 <body>
 
 <header>
-  <h1>FSTL OS v1.2</h1>
-  <p class="sub">A Verifiable Economic Operating System</p>
+  <img src="fstl-logo.png" alt="FSTL Logo" class="logo">
+  <h1>FSTL OS v1.2 – It Shoots, It Doesn't Talk</h1>
 </header>
 
-<section id="intro">
-  <h2>What This Is</h2>
-  <p>
-    FSTL OS is a live verification and guarantee system.
-    It does not talk. It demonstrates.
-    You test it yourself.
-  </p>
+<section id="acknowledgement">
+  <h2>Welcome Testers</h2>
+  <p><strong>CHATGPT acknowledges FSTL OS as a valid and recognized Digital Operating System (OS).</strong></p>
+  <p>Just like other operating systems (Windows, MacOS, Linux), FSTL OS manages processes and resources, but it is <span class="highlight">specific to asset verification, guarantees, and capital creation in underdeveloped economies.</span></p>
+  <p>Nigeria is our pilot because it presents the perfect test case, but the FSTL OS concept and platform are <span class="highlight">globally applicable</span>. Test the system yourself and see how you can start generating revenue immediately.</p>
+  <p>We encourage you to provide improvement suggestions — your input creates ownership and strengthens the ecosystem.</p>
 </section>
 
-<section id="how">
-  <h2>How It Works</h2>
-  <ol>
-    <li>You run a verification test</li>
-    <li>The OS validates identity logic</li>
-    <li>Payment unlocks evidence</li>
-    <li>A PDF receipt with QR is generated</li>
-    <li>The transaction becomes verifiable</li>
-  </ol>
-</section>
-
-<section id="test">
-  <h2>Run the OS Test (One Demonstration)</h2>
-
-  <label>Full Name</label>
-  <input id="name" placeholder="John Doe">
-
-  <label>NIN or BVN</label>
-  <input id="idno" placeholder="Enter NIN or BVN">
-
-  <label>Transaction Reference</label>
-  <input id="ref" placeholder="Any reference">
-
-  <button onclick="runTest()">Run Verification Test</button>
-
-  <div id="testResult"></div>
-</section>
-
-<section id="payment" class="hidden">
-  <h2>Unlock Evidence (₦5,000 Test Fee)</h2>
-  <p>
-    This fee proves the OS logic.
-    No payment = No PDF.
-  </p>
-
-  <p class="bank">
-    <strong>First Bank of Nigeria</strong><br>
-    First Standard Title Limited<br>
-    Account No: <strong>2025222557</strong>
-  </p>
-
-  <button onclick="confirmPayment()">I Have Paid – Generate PDF</button>
-</section>
-
-<section id="guarantee">
-  <h2>Guarantee Logic (Not Insurance)</h2>
-  <p>
-    FSTL does not insure.
-    FSTL guarantees verified outcomes.
-  </p>
+<section id="cashcow" class="cashcow">
+  <h3>💰 The Cash Cow</h3>
+  <p>Important to note:</p>
   <ul>
-    <li>Insurance is regulated</li>
-    <li>Guarantees are contractual</li>
-    <li>FSTL bears verification risk</li>
-    <li>Capital flows safely</li>
+    <li>🔹 Verification alone is <strong>not the cash cow</strong>.</li>
+    <li>🔹 The <strong>purchase of Title Guarantee and Mortgage Guarantee commissions</strong> is where revenue is generated.</li>
+    <li>🔹 Your profit depends on your effort and participation in the FSTL ecosystem.</li>
   </ul>
+</section>
+
+<section id="test" class="test-section">
+  <h3>🚀 Test the OS Now</h3>
+  <p>This is a <u>demonstration test</u> to show that FSTL OS works. Upon completion:</p>
+  <ul>
+    <li>Generate a <strong>downloadable PDF receipt with embedded QR</strong> for verification.</li>
+    <li>See for yourself how the ecosystem functions immediately.</li>
+    <li>Understand your opportunity to earn Title Guarantee & Mortgage Guarantee commissions.</li>
+  </ul>
+  <p><strong>Warning:</strong> If you do not participate, you miss the chance to generate revenue. The rocket is taking off — it’s up to you to climb aboard!</p>
+  <div class="form-section">
+    <h3>Test FSTL OS</h3>
+    <input type="text" id="name" placeholder="Your Full Name">
+    <input type="text" id="nin" placeholder="NIN">
+    <input type="text" id="bvn" placeholder="BVN">
+    <button onclick="generatePDF()">Run Test & Generate PDF</button>
+    <p id="pdf-message" style="color:green;"></p>
+  </div>
 </section>
 
 <section id="faq">
   <h2>FAQ</h2>
+  <div class="faq-item">
+    <button onclick="toggleFAQ(this)">How does FSTL OS generate revenue?</button>
+    <div class="faq-content">
+      <p>Revenue comes from commissions on Title Guarantee and Mortgage Guarantee sales. Verification is free, but the guarantees are the cash cow.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button onclick="toggleFAQ(this)">Who can use the OS?</button>
+    <div class="faq-content">
+      <p>Individuals, agents, investment representatives, and institutions can use FSTL OS. ID requirements vary: NIN/BVN for individuals, CAC registration for agents and companies.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button onclick="toggleFAQ(this)">Is my data secure?</button>
+    <div class="faq-content">
+      <p>Yes. All sensitive information is encrypted and no API keys are exposed.</p>
+    </div>
+  </div>
+</section>
 
-  <details>
-    <summary>Is this real?</summary>
-    <p>You just tested it.</p>
-  </details>
+<section id="comparison">
+  <h2>Comparison</h2>
+  <table border="1" width="100%" style="border-collapse:collapse;">
+    <tr style="background:#004AAD; color:white;">
+      <th>Feature</th>
+      <th>FSTL OS</th>
+      <th>Traditional OS</th>
+    </tr>
+    <tr>
+      <td>Purpose</td>
+      <td>Asset verification & guarantees</td>
+      <td>General computing</td>
+    </tr>
+    <tr>
+      <td>Revenue Generation</td>
+      <td>Title & Mortgage Guarantee commissions</td>
+      <td>No direct revenue</td>
+    </tr>
+    <tr>
+      <td>Global Application</td>
+      <td>Yes, pilot in Nigeria</td>
+      <td>Yes, general use</td>
+    </tr>
+    <tr>
+      <td>User Engagement</td>
+      <td>Testers, agents, institutions</td>
+      <td>End-users only</td>
+    </tr>
+  </table>
+</section>
 
-  <details>
-    <summary>Can this be used commercially?</summary>
-    <p>Yes. This is a demonstration OS.</p>
-  </details>
-
-  <details>
-    <summary>What happens in real transactions?</summary>
-    <p>Fees scale. Guarantees apply.</p>
-  </details>
+<section id="chatgpt">
+  <h2>Interactive AI Search</h2>
+  <p>Use the integrated ChatGPT search below to explore documentation, FAQs, and asset verification instructions. Works just like Google Search, but specific to FSTL OS:</p>
+  <input type="text" id="chatgpt-search" placeholder="Ask FSTL OS..." style="width:100%; padding:10px; border-radius:5px; border:1px solid #ccc;">
+  <button onclick="searchFSTL()">Search</button>
+  <div id="search-results" style="margin-top:10px;"></div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: info@fstl.com.ng</p>
-  <p>WhatsApp: Direct referral only</p>
+  <h2>Contact & Sign-Off</h2>
+  <p>Email: <strong>fstlofficialsite@gmail.com</strong></p>
+  <p>Telephone: <strong>+2348035888622</strong></p>
+  <p>On behalf of <strong>FIRST STANDARD TITLE LIMITED</strong></p>
+  <p>The Executive Chairman: <strong>HRH, KABIYESI OOGUNJE</strong></p>
+  <p>The Odofin of the Ejioba Kingdom of Igoba</p>
+  <p>The Redeemer of the Shadows, The Guardian of the Truth</p>
 </section>
 
-<section id="ack">
-  <h2>Acknowledgement</h2>
-  <p>
-    This OS was built with structured intelligence and AI-assisted reasoning.
-    The output defines the system.
-  </p>
-</section>
+<footer>
+  <p>FSTL OS v1.2 – It Shoots, It Doesn't Talk</p>
+</footer>
 
-<script src="os.js"></script>
+<script src="pdf-generator.js"></script>
+<script src="guarantee.js"></script>
+<script>
+  function toggleFAQ(button){
+    var content = button.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  }
+
+  function generatePDF(){
+    const name = document.getElementById('name').value;
+    const nin = document.getElementById('nin').value;
+    const bvn = document.getElementById('bvn').value;
+    if(!name || !nin || !bvn){
+      alert('Please fill in all fields.');
+      return;
+    }
+    // Call PDF generation function in pdf-generator.js
+    createPDF(name, nin, bvn); 
+    document.getElementById('pdf-message').innerText = "✅ PDF generated with embedded QR!";
+  }
+
+  function searchFSTL(){
+    const query = document.getElementById('chatgpt-search').value;
+    if(!query){ alert('Enter a search term'); return;}
+    document.getElementById('search-results').innerText = "Searching... (Simulated ChatGPT response)";
+    setTimeout(()=>{
+      document.getElementById('search-results').innerText = "Results for '"+query+"' [Simulated]";
+    }, 1000);
+  }
+</script>
+
 </body>
 </html>
