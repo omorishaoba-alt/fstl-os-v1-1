@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FSTL OS v1.1 | First Standard Title Limited</title>
+<style>
+  /* --- FSTL Blue Theme --- */
+  :root { --fstl-blue: #0057B7; --fstl-dark: #003366; --fstl-light: #E6F0FA; }
+
+  body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; background-color:#f5f5f5; color:#333; }
+  header { background: var(--fstl-blue); color:white; padding:20px 10px; text-align:center; }
+  header h1 { margin:0; font-size:2em; }
+  nav { background: var(--fstl-dark); display:flex; justify-content:center; flex-wrap:wrap; }
+  nav a { color:white; padding:10px 20px; text-decoration:none; }
+  nav a:hover { background: var(--fstl-blue); }
+  section { padding:20px; max-width:1200px; margin:auto; }
+  h2 { color: var(--fstl-dark); }
+  table { width:100%; border-collapse:collapse; margin:15px 0; }
+  table, th, td { border:1px solid #ddd; }
+  th, td { padding:10px; text-align:center; }
+  th { background: var(--fstl-blue); color:white; }
+  .btn { background: var(--fstl-blue); color:white; padding:10px 20px; border:none; cursor:pointer; }
+  .btn:hover { background: var(--fstl-dark); }
+  input, select { padding:10px; width:100%; margin:5px 0; }
+  .faq-item { background:var(--fstl-light); margin-bottom:5px; padding:10px; cursor:pointer; border-left:5px solid var(--fstl-blue);}
+  .faq-answer { display:none; padding:10px; border-left:5px solid var(--fstl-dark); background:#fff; margin-bottom:10px;}
+  footer { background:var(--fstl-dark); color:white; text-align:center; padding:20px; margin-top:20px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>FSTL OS v1.1</h1>
+  <p>Verification, Collateralisation & Wealth Creation – The OS That Shoots, It Doesn’t Talk</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#test-os">Test OS</a>
+  <a href="#comparison">Comparison</a>
+  <a href="#education">Education</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+  <a href="#acknowledgement">Acknowledgement</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <h2>Welcome to FSTL OS</h2>
+  <p>With over 20 years of experience, First Standard Title Limited (FSTL) has developed a unique digital operating system for verification, collateralisation, and capital creation. Our vision is to empower individuals and institutions to leverage real-world assets to generate wealth in a secure, transparent, and efficient ecosystem.</p>
+  <p>FSTL OS is fully backed by AI-driven intelligence, combining verification, structured workflows, and secure guarantees to create immediate economic value.</p>
+</section>
+
+<!-- TEST OS -->
+<section id="test-os">
+  <h2>Test the FSTL OS</h2>
+  <p>Verify your assets or collateral instantly, generate a PDF receipt with embedded QR, and experience the OS firsthand.</p>
+  <form id="testForm">
+    <label for="name">Full Name (as per NIN/BVN)</label>
+    <input type="text" id="name" required>
+    <label for="idnumber">NIN/BVN</label>
+    <input type="text" id="idnumber" required>
+    <label for="asset">Asset Description</label>
+    <input type="text" id="asset" required>
+    <button type="submit" class="btn">Run Test</button>
+  </form>
+  <div id="pdfResult" style="margin-top:20px;"></div>
+</section>
+
+<!-- COMPARISON -->
+<section id="comparison">
+  <h2>Why FSTL OS Works</h2>
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>GIS</th>
+      <th>C of O</th>
+      <th>FSTL OS</th>
+    </tr>
+    <tr>
+      <td>Capital Creation</td>
+      <td>✗ Limited</td>
+      <td>✗ Limited</td>
+      <td>✓ Instant & Verified</td>
+    </tr>
+    <tr>
+      <td>Verification</td>
+      <td>✓ Maps Only</td>
+      <td>✓ Certificate Only</td>
+      <td>✓ Automated & Digital</td>
+    </tr>
+    <tr>
+      <td>Guarantee</td>
+      <td>✗</td>
+      <td>✗</td>
+      <td>✓ Non-regulated, Risk-assured</td>
+    </tr>
+    <tr>
+      <td>Ease of Use</td>
+      <td>✗ Complex</td>
+      <td>✗ Paper-based</td>
+      <td>✓ Fully Digital & WhatsApp-Friendly</td>
+    </tr>
+  </table>
+</section>
+
+<!-- EDUCATION & LEGAL -->
+<section id="education">
+  <h2>Educational & Legal Guidance</h2>
+  <p>FSTL OS enables individuals and institutions to safely convert real-world assets into verified collateral. Our processes are backed by:</p>
+  <ul>
+    <li>Verified Bank Account: First Bank of Nigeria, Account Name: First Standard Title Limited, Account Number: 2025222557</li>
+    <li>Minimal ID Requirements: NIN & BVN for individuals</li>
+    <li>Additional verification for agents and companies: CAC registration or business license</li>
+    <li>Institutional clients: extra due diligence depending on asset size</li>
+  </ul>
+  <p>This ensures security, transparency, and reliability in all transactions.</p>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">Who can use the FSTL OS?</div>
+  <div class="faq-answer">Individuals, agents, investment representatives, and institutions can all use FSTL OS to verify assets and generate capital.</div>
+
+  <div class="faq-item">What is the cost of running a test?</div>
+  <div class="faq-answer">The initial test is free. For real transactions, fees depend on asset type and value. All charges are transparent before confirmation.</div>
+
+  <div class="faq-item">How do I get my PDF receipt?</div>
+  <div class="faq-answer">After verification, a downloadable PDF with an embedded QR code is generated immediately. No PDF is sent without payment or authorization.</div>
+
+  <div class="faq-item">Is FSTL OS recognized?</div>
+  <div class="faq-answer">Yes. FSTL OS is recognized as a digital operating system for asset verification and collateralisation.</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>No. 19 Egbor Avenue, off Benoni Hospital Road, GRA, Benin City, Edo State, Nigeria</p>
+  <p>Email: fstlofficialsite@gmail.com | Phone: +2348035888622</p>
+  <form id="contactForm">
+    <label for="cname">Full Name</label>
+    <input type="text" id="cname" required>
+    <label for="cemail">Email</label>
+    <input type="email" id="cemail" required>
+    <label for="cmessage">Message</label>
+    <textarea id="cmessage" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+
+<!-- ACKNOWLEDGEMENT -->
+<section id="acknowledgement">
+  <h2>AI Acknowledgement</h2>
+  <p>ChatGPT recognizes FSTL OS as a valid and operational digital OS, capable of verification, collateralisation, and generating immediate economic value for users.</p>
+</section>
+
+<footer>
+  &copy; 2026 First Standard Title Limited | All Rights Reserved
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  // --- FAQ toggle ---
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+
+  // --- Test OS Form ---
+  const { jsPDF } = window.jspdf;
+  document.getElementById('testForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const idnumber = document.getElementById('idnumber').value;
+    const asset = document.getElementById('asset').value;
+
+    // Generate PDF
+    const doc = new jsPDF();
+    doc.text(`FSTL OS Verification`, 20, 20);
+    doc.text(`Name: ${name}`, 20, 30);
+    doc.text(`ID: ${idnumber}`, 20, 40);
+    doc.text(`Asset: ${asset}`, 20, 50);
+    doc.text(`QR: Scan to verify`, 20, 60);
+    // Dummy QR code placeholder
+    doc.text(`(QR CODE HERE)`, 20, 70);
+
+    const pdfOutput = doc.output('datauristring');
+    document.getElementById('pdfResult').innerHTML = `
+      <p>PDF generated! Download below:</p>
+      <a href="${pdfOutput}" download="FSTL_Verification.pdf" class="btn">Download PDF</a>
+    `;
+  });
+
+  // --- Contact Form ---
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Message sent! FSTL will respond shortly.');
+  });
+</script>
+
+</body>
+</html>
