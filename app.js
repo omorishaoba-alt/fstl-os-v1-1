@@ -12,4 +12,5 @@ function runTest() {
   document.getElementById("testResult").innerText =
     "Verification complete. Result: VALID.";
 
-  document.getElementById("payBtn").
+  document.getElementById("payBtn").disabled = false;
+}
