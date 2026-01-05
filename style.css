@@ -1,0 +1,54 @@
+:root {
+  --fstl-blue: #0b3c5d;
+  --fstl-light: #f4f8fb;
+  --fstl-dark: #1c1c1c;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--fstl-light);
+  color: var(--fstl-dark);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--fstl-blue);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+button {
+  background: var(--fstl-blue);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.notice {
+  background: #fff;
+  border-left: 5px solid var(--fstl-blue);
+  padding: 15px;
+  margin: 20px 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  padding: 20px;
+  color: #666;
+}
