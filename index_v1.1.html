@@ -1,186 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>FSTL OS – Verification Test</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- FSTL BLUE -->
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0b2c4a;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-    header {
-      background: #081f33;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 22px;
-    }
-    section {
-      padding: 20px;
-      max-width: 720px;
-      margin: auto;
-    }
-    .card {
-      background: #ffffff;
-      color: #000000;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      background: #0b5ed7;
-      color: #ffffff;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .btn:disabled {
-      background: #999999;
-    }
-    .notice {
-      font-size: 14px;
-      color: #333333;
-      background: #f1f1f1;
-      padding: 10px;
-      border-left: 4px solid #0b5ed7;
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      font-size: 12px;
-      padding: 20px;
-      color: #cccccc;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 12px;
-      border-radius: 4px;
-      border: 1px solid #cccccc;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FSTL OS v1.2 – Verification & Guarantee System</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <h1>FSTL OS</h1>
-  <p>Verification • Trust • Value Chain</p>
+  <h1>FSTL OS v1.2</h1>
+  <p class="sub">A Verifiable Economic Operating System</p>
 </header>
 
-<section>
-
-  <!-- SECTION 1 -->
-  <div class="card">
-    <h2>What is FSTL OS?</h2>
-    <p>
-      FSTL OS is a verification operating system designed to convert
-      identity, property, and transaction data into trusted, bankable outputs.
-    </p>
-    <p>
-      This page allows you to run <strong>one live test</strong> to confirm that the system works.
-    </p>
-  </div>
-
-  <!-- SECTION 2 -->
-  <div class="card">
-    <h2>Important Notice</h2>
-    <div class="notice">
-      This is a demonstration test.<br>
-      <strong>No payment = No PDF.</strong><br>
-      The output proves system functionality only.
-    </div>
-  </div>
-
-  <!-- SECTION 3 -->
-  <div class="card">
-    <h2>Run the Test</h2>
-
-    <input type="text" id="fullname" placeholder="Full Name" required>
-    <input type="text" id="ref" placeholder="Reference (NIN / BVN / ID)" required>
-
-    <button class="btn" onclick="runTest()">Run Verification Test</button>
-
-    <div id="result" style="margin-top:20px;"></div>
-  </div>
-
-  <!-- SECTION 4 -->
-  <div class="card">
-    <h2>What Happens After a Real Transaction?</h2>
-    <p>
-      In a live environment, successful verification attracts:
-    </p>
-    <ul>
-      <li>Verification fee</li>
-      <li>Guarantee fee</li>
-      <li>Insurance-backed assurance</li>
-      <li>Institutional trust enablement</li>
-    </ul>
-    <p>
-      This test only confirms system readiness.
-    </p>
-  </div>
-
-  <!-- SECTION 5 -->
-  <div class="card">
-    <h2>Technology Acknowledgement</h2>
-    <p>
-      FSTL OS operates independently while integrating modern tools,
-      including AI-assisted logic comparable to systems such as ChatGPT.
-    </p>
-    <p>
-      AI is used as an <strong>assistant</strong>, not a decision-maker.
-      Authority, guarantees, and accountability remain institutional.
-    </p>
-  </div>
-
+<section id="intro">
+  <h2>What This Is</h2>
+  <p>
+    FSTL OS is a live verification and guarantee system.
+    It does not talk. It demonstrates.
+    You test it yourself.
+  </p>
 </section>
 
-<footer>
-  © First Standard Title Limited (FSTL)<br>
-  This system output is verifiable and auditable.
-</footer>
+<section id="how">
+  <h2>How It Works</h2>
+  <ol>
+    <li>You run a verification test</li>
+    <li>The OS validates identity logic</li>
+    <li>Payment unlocks evidence</li>
+    <li>A PDF receipt with QR is generated</li>
+    <li>The transaction becomes verifiable</li>
+  </ol>
+</section>
 
-<script>
-  function runTest() {
-    const name = document.getElementById("fullname").value;
-    const ref = document.getElementById("ref").value;
-    const result = document.getElementById("result");
+<section id="test">
+  <h2>Run the OS Test (One Demonstration)</h2>
 
-    if (!name || !ref) {
-      result.innerHTML = "<p style='color:red;'>Please complete all fields.</p>";
-      return;
-    }
+  <label>Full Name</label>
+  <input id="name" placeholder="John Doe">
 
-    const qrData = encodeURIComponent("FSTL-OS-VERIFIED-" + ref);
+  <label>NIN or BVN</label>
+  <input id="idno" placeholder="Enter NIN or BVN">
 
-    result.innerHTML = `
-      <h3>Verification Successful</h3>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Reference:</strong> ${ref}</p>
-      <p>Status: VERIFIED (TEST)</p>
+  <label>Transaction Reference</label>
+  <input id="ref" placeholder="Any reference">
 
-      <p><strong>Embedded QR:</strong></p>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrData}" alt="QR Code">
+  <button onclick="runTest()">Run Verification Test</button>
 
-      <p style="margin-top:15px;">
-        PDF generation is triggered after payment in a live transaction.
-      </p>
-    `;
-  }
-</script>
+  <div id="testResult"></div>
+</section>
 
+<section id="payment" class="hidden">
+  <h2>Unlock Evidence (₦5,000 Test Fee)</h2>
+  <p>
+    This fee proves the OS logic.
+    No payment = No PDF.
+  </p>
+
+  <p class="bank">
+    <strong>First Bank of Nigeria</strong><br>
+    First Standard Title Limited<br>
+    Account No: <strong>2025222557</strong>
+  </p>
+
+  <button onclick="confirmPayment()">I Have Paid – Generate PDF</button>
+</section>
+
+<section id="guarantee">
+  <h2>Guarantee Logic (Not Insurance)</h2>
+  <p>
+    FSTL does not insure.
+    FSTL guarantees verified outcomes.
+  </p>
+  <ul>
+    <li>Insurance is regulated</li>
+    <li>Guarantees are contractual</li>
+    <li>FSTL bears verification risk</li>
+    <li>Capital flows safely</li>
+  </ul>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+
+  <details>
+    <summary>Is this real?</summary>
+    <p>You just tested it.</p>
+  </details>
+
+  <details>
+    <summary>Can this be used commercially?</summary>
+    <p>Yes. This is a demonstration OS.</p>
+  </details>
+
+  <details>
+    <summary>What happens in real transactions?</summary>
+    <p>Fees scale. Guarantees apply.</p>
+  </details>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: info@fstl.com.ng</p>
+  <p>WhatsApp: Direct referral only</p>
+</section>
+
+<section id="ack">
+  <h2>Acknowledgement</h2>
+  <p>
+    This OS was built with structured intelligence and AI-assisted reasoning.
+    The output defines the system.
+  </p>
+</section>
+
+<script src="os.js"></script>
 </body>
 </html>
