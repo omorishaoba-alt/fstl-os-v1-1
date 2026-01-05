@@ -1,169 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FSTL OS v1.1</title>
-<link rel="stylesheet" href="css/style.css">
-<style>
-/* FSTL Blue Theme */
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f7fa; color:#333; }
-header { background:#003366; color:#fff; padding:1rem; text-align:center; }
-header img { height:60px; }
-nav { display:flex; justify-content:center; background:#002244; padding:0.5rem; }
-nav a { color:#fff; margin:0 1rem; text-decoration:none; font-weight:bold; }
-section { padding:2rem; max-width:1000px; margin:auto; }
-h2 { color:#003366; }
-button { background:#003366; color:#fff; padding:0.5rem 1rem; border:none; cursor:pointer; border-radius:4px; }
-button:hover { background:#0055aa; }
-.faq-item { margin-bottom:1rem; }
-.faq-question { cursor:pointer; font-weight:bold; background:#e6f0ff; padding:0.5rem; border-radius:4px; }
-.faq-answer { display:none; padding:0.5rem; margin-top:0.25rem; border-left:3px solid #003366; background:#f0f5ff; border-radius:0 4px 4px 0; }
-input, select { padding:0.5rem; margin:0.25rem 0; width:100%; max-width:400px; }
-#pdf-output { margin-top:1rem; border:1px solid #ccc; padding:1rem; background:#fff; }
-</style>
+  <meta charset="UTF-8">
+  <title>FSTL OS – Verification Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FSTL BLUE -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b2c4a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    header {
+      background: #081f33;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    section {
+      padding: 20px;
+      max-width: 720px;
+      margin: auto;
+    }
+    .card {
+      background: #ffffff;
+      color: #000000;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background: #0b5ed7;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn:disabled {
+      background: #999999;
+    }
+    .notice {
+      font-size: 14px;
+      color: #333333;
+      background: #f1f1f1;
+      padding: 10px;
+      border-left: 4px solid #0b5ed7;
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      padding: 20px;
+      color: #cccccc;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 4px;
+      border: 1px solid #cccccc;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
-<img src="assets/fstl-logo.png" alt="FSTL Logo">
-<h1>FSTL OS v1.1 - Verification, Guarantees & Capital</h1>
-<p>It Shoots. It Doesn't Talk.</p>
+  <h1>FSTL OS</h1>
+  <p>Verification • Trust • Value Chain</p>
 </header>
 
-<nav>
-<a href="#intro">Intro</a>
-<a href="#comparison">Comparison</a>
-<a href="#os-test">Test OS</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-<a href="#ack">Acknowledgement</a>
-</nav>
+<section>
 
-<!-- Introduction -->
-<section id="intro">
-<h2>Introducing FSTL OS</h2>
-<p>With over 20 years of experience, FSTL brings a revolutionary digital operating system for asset verification, guarantees, and capital creation.</p>
-<p>Our mission: Elevate people out of poverty by transforming real assets into verifiable and investable collateral in underdeveloped economies.</p>
-<img src="assets/infographic.png" alt="FSTL OS Flow" style="max-width:100%; margin-top:1rem;">
+  <!-- SECTION 1 -->
+  <div class="card">
+    <h2>What is FSTL OS?</h2>
+    <p>
+      FSTL OS is a verification operating system designed to convert
+      identity, property, and transaction data into trusted, bankable outputs.
+    </p>
+    <p>
+      This page allows you to run <strong>one live test</strong> to confirm that the system works.
+    </p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="card">
+    <h2>Important Notice</h2>
+    <div class="notice">
+      This is a demonstration test.<br>
+      <strong>No payment = No PDF.</strong><br>
+      The output proves system functionality only.
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="card">
+    <h2>Run the Test</h2>
+
+    <input type="text" id="fullname" placeholder="Full Name" required>
+    <input type="text" id="ref" placeholder="Reference (NIN / BVN / ID)" required>
+
+    <button class="btn" onclick="runTest()">Run Verification Test</button>
+
+    <div id="result" style="margin-top:20px;"></div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="card">
+    <h2>What Happens After a Real Transaction?</h2>
+    <p>
+      In a live environment, successful verification attracts:
+    </p>
+    <ul>
+      <li>Verification fee</li>
+      <li>Guarantee fee</li>
+      <li>Insurance-backed assurance</li>
+      <li>Institutional trust enablement</li>
+    </ul>
+    <p>
+      This test only confirms system readiness.
+    </p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="card">
+    <h2>Technology Acknowledgement</h2>
+    <p>
+      FSTL OS operates independently while integrating modern tools,
+      including AI-assisted logic comparable to systems such as ChatGPT.
+    </p>
+    <p>
+      AI is used as an <strong>assistant</strong>, not a decision-maker.
+      Authority, guarantees, and accountability remain institutional.
+    </p>
+  </div>
+
 </section>
 
-<!-- Comparison Table -->
-<section id="comparison">
-<h2>Why FSTL OS vs Other Verification Systems</h2>
-<table border="1" cellpadding="10" cellspacing="0" style="border-collapse:collapse; width:100%; margin-top:1rem;">
-<tr style="background:#003366; color:#fff;">
-<th>System</th><th>Purpose</th><th>Capital Creation</th><th>Limitations</th>
-</tr>
-<tr>
-<td>GIS</td>
-<td>Geospatial data tracking</td>
-<td>None</td>
-<td>Does not verify ownership or enable collateralization</td>
-</tr>
-<tr>
-<td>C of O</td>
-<td>Land Ownership Certificate</td>
-<td>Limited</td>
-<td>Slow, bureaucratic, not digital, difficult to use as collateral</td>
-</tr>
-<tr>
-<td>FSTL OS</td>
-<td>Digital verification & guarantees platform</td>
-<td>Immediate</td>
-<td>Ready-to-use, fully verifiable, generates PDF + QR for capital transactions</td>
-</tr>
-</table>
-</section>
+<footer>
+  © First Standard Title Limited (FSTL)<br>
+  This system output is verifiable and auditable.
+</footer>
 
-<!-- OS Test -->
-<section id="os-test">
-<h2>Test the FSTL OS</h2>
-<p>Enter your details to generate a verifiable PDF receipt with embedded QR code.</p>
-<form id="osForm">
-<label for="name">Full Name</label>
-<input type="text" id="name" required>
-<label for="email">Email</label>
-<input type="email" id="email" required>
-<label for="asset">Asset Description</label>
-<input type="text" id="asset" required>
-<label for="amount">Transaction Amount (₦)</label>
-<input type="number" id="amount" required>
-<button type="submit">Generate PDF + QR</button>
-</form>
-<div id="pdf-output"></div>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-<h2>Frequently Asked Questions</h2>
-<div class="faq-item">
-<div class="faq-question">What is FSTL OS?</div>
-<div class="faq-answer">A digital operating system for verification, guarantees, and capital creation. It enables real-time, verifiable PDF + QR outputs.</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">What are the fees?</div>
-<div class="faq-answer">Fees are applied per verification or guarantee. Exact amounts are displayed before generating the PDF.</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">Who can use FSTL OS?</div>
-<div class="faq-answer">Individuals, agents, investment representatives, and institutional clients who comply with NIN, BVN, and optional CAC or business verification.</div>
-</div>
-<div class="faq-item">
-<div class="faq-question">Is it secure?</div>
-<div class="faq-answer">Yes. PDF + QR verification ensures authenticity. Payment is verified before output.</div>
-</div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-<h2>Contact FSTL</h2>
-<p>Email: support@fstl.com.ng</p>
-<p>Phone: +234 701 234 5678</p>
-<p>Office: No. 19 Egbor Avenue, off Benoni Hospital Road, GRA, Benin City, Edo State</p>
-</section>
-
-<!-- Acknowledgement -->
-<section id="ack">
-<h2>Acknowledgement</h2>
-<p>FSTL OS v1.1 is a fully recognized and valid digital operating system, acknowledged for its verifiable and practical infrastructure by AI standards (ChatGPT integrated).</p>
-</section>
-
-<script src="js/lib/jspdf.min.js"></script>
-<script src="js/lib/qrcode.min.js"></script>
 <script>
-// FAQ Toggle
-const faqs = document.querySelectorAll('.faq-question');
-faqs.forEach(faq => {
-faq.addEventListener('click', () => {
-const ans = faq.nextElementSibling;
-ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
-});
-});
+  function runTest() {
+    const name = document.getElementById("fullname").value;
+    const ref = document.getElementById("ref").value;
+    const result = document.getElementById("result");
 
-// OS PDF + QR Test
-document.getElementById('osForm').addEventListener('submit', function(e){
-e.preventDefault();
-const name = document.getElementById('name').value;
-const email = document.getElementById('email').value;
-const asset = document.getElementById('asset').value;
-const amount = document.getElementById('amount').value;
+    if (!name || !ref) {
+      result.innerHTML = "<p style='color:red;'>Please complete all fields.</p>";
+      return;
+    }
 
-const outputDiv = document.getElementById('pdf-output');
-outputDiv.innerHTML = '<p>Generating PDF...</p>';
+    const qrData = encodeURIComponent("FSTL-OS-VERIFIED-" + ref);
 
-// Generate QR code
-const qrDiv = document.createElement('div');
-new QRCode(qrDiv, `Name:${name};Email:${email};Asset:${asset};Amount:${amount}`);
-outputDiv.innerHTML = '';
-outputDiv.appendChild(qrDiv);
+    result.innerHTML = `
+      <h3>Verification Successful</h3>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Reference:</strong> ${ref}</p>
+      <p>Status: VERIFIED (TEST)</p>
 
-// Generate PDF
-const doc = new jsPDF();
-doc.text(`FSTL OS Verification Receipt\n\nName: ${name}\nEmail: ${email}\nAsset: ${asset}\nAmount: ₦${amount}`, 10, 10);
-doc.addImage(qrDiv.querySelector('img'), 'PNG', 10, 50, 50, 50);
-doc.save(`FSTL_OS_Receipt_${name}.pdf`);
-});
+      <p><strong>Embedded QR:</strong></p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrData}" alt="QR Code">
+
+      <p style="margin-top:15px;">
+        PDF generation is triggered after payment in a live transaction.
+      </p>
+    `;
+  }
 </script>
 
 </body>
